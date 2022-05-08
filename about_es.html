@@ -21,12 +21,12 @@
       </div>
     </header>
     
-    <nav>
-      <ul>
-      <li><a href="index_es.html">Trabajos</a></li>
-      <li><a href="about_es.html">Acerca de mí</a></li>
-      <li><a href="contact_es.html">Contacto</a></li>
-      <li><a href="https://rubi-vera.blogspot.com">Blog</a></li>
+    <nav id="menu">
+      <ul><img src="images/vacia_EN.png" alt="">
+      <li><a class="left" data-image="images/work_ES.png" href="index_es.html">Trabajos</a></li>
+      <li><a class="right" data-image="images/about_ES.png" href="about_es.html">Acerca de mí</a></li>
+      <li><a class="left" data-image="images/contact_ES.png" href="contact_es.html">Contacto</a></li>
+      <li><a class="right" data-image="images/blog_ES.png" href="https://rubi-vera.blogspot.com">Blog</a></li>
       </ul>
     </nav>
     
@@ -37,7 +37,7 @@
           <th><img src="images/profilepic.png" alt="profile"width="100%"></th>
           <th style="width:75%">
             <p> 
-              <b>A little about me...</b>
+              <b>Un poco sobre mí...</b>
               <br>
                   Aún recuerdo el día que, al entregarle un trabajo de dibujo, el profesor me pregunto que si iba ir a estudiar Bellas Artes (casi como si quisiera que le confirmase que sí, quizás pensó que yo tenía talento jajaja), a lo que yo le respondí: “No, señor profesor, voy a estudiar Electrónica”. Siempre me ha gustado todo lo relacionado con las artes plásticas y no puedo negar que siempre llevaré esa espina clavada, pero de todas formas estudiar electrónica me ha dado una base para trapichear con la informática desde tiempo remotos, cuando los sistemas operativos solo eran una ristra de comandos. Sea como fuese y si cada una de mis opciones de entonces: Bellas Artes y Electrónica fueran dos líneas continuas, habría un momento donde el destino las cruzaría y es en ese punto donde me encuentro: haciendo este ciclo formativo que se se puede decir une estos dos mundos. 
 Ah! Y me llamo Fco Javier Rubio Olvera, pero me puedes llamar Javi.. 
@@ -51,6 +51,26 @@ Ah! Y me llamo Fco Javier Rubio Olvera, pero me puedes llamar Javi..
     <footer>
       <p>©Rubi & Vera 2022</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+        $(function(){
+
+          //code here
+          var image = $("#menu").find('img').attr('src');
+          //console.log(image);
+          $("#menu ul li a").mouseover(function(){
+            var currentImage = $(this).attr('data-image');
+          //[ console.log(currentImage)';
+          $(this).parent().parent().parent().find('img').attr("src", currentImage);
+          $("#menu img").css("opacity", "1");
+        });
+
+        $("#menu ul li a").mouseout(function(){
+          $("#menu img").css("opacity", "1");
+          });
+        });
+        </script>
       
   </body>
 </html>

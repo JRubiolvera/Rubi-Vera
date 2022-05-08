@@ -47,8 +47,7 @@ abbr {
 
 
 nav{
-  text-align: center;
-  margin-bottom: px;
+  text-align: center; 
 }
 nav ul{
   padding: 0;
@@ -57,15 +56,13 @@ nav ul li{
   display: block;
   margin-bottom: 30px;
 }
-
 nav ul li a{
   color: #000000;
   text-decoration: none;
   font-size: 28px;
   position: relative;
 }
-
-nav ul li a:before{
+nav ul li .left:before{
   content: '';
   position: absolute;
   top: 50%;
@@ -76,11 +73,27 @@ nav ul li a:before{
   transition: all ease 0.5s;
   opacity: 0;
 }
-nav ul li a:hover:before{
+nav ul li .right:before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -100%;
+  width: 0%;
+  height: 2px;
+  background-color: #000000;
+  transition: all ease 0.5s;
+  opacity: 0;
+}
+nav ul li .left:hover:before{
   width: 100%;
   opacity: 1;
   left: 0;
 
+}
+nav ul li .right:hover:before{
+  width: 100%;
+  opacity: 1;
+  right: 0;
 }
 
 section {
@@ -91,6 +104,9 @@ section {
   -webkit-box-shadow: 0 4px 20px -1px #777;
   -moz-box-shadow: 0 4px 20px -1px #777;
   box-shadow: 0 4px 20px -1px #777;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 footer {
@@ -116,7 +132,7 @@ footer {
   flex-wrap: wrap;
   max-width: 1400px;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
 .column{
@@ -184,3 +200,16 @@ footer {
   font-size:20px;
   font-weight:normal;
 }
+
+
+#menu img{
+position: absolute;
+margin-left:-265px;
+margin-top:-25px;
+width:525px;
+}
+
+#menu ul{
+position: relative;
+}
+

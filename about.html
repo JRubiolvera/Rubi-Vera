@@ -21,12 +21,12 @@
       </div>
     </header>
     
-    <nav>
-      <ul>
-      <li><a href="index.html">Work</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="https://rubi-vera.blogspot.com">Blog</a></li>
+    <nav id="menu">
+      <ul><img src="images/vacia_EN.png" alt="">
+      <li><a class="left" data-image="images/work_EN.png" href="index.html">Work</a></li>
+      <li><a class="right" data-image="images/about_EN.png" href="about.html">About</a></li>
+      <li><a class="left" data-image="images/contact_EN.png" href="contact.html">Contact</a></li>
+      <li><a class="right" data-image="images/blog_EN.png" href="https://rubi-vera.blogspot.com">Blog</a></li>
       </ul>
     </nav>
     
@@ -50,6 +50,26 @@
     <footer>
       <p>©Rubi & Vera 2022</p>
     </footer>
-      
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+        $(function(){
+
+          //code here
+          var image = $("#menu").find('img').attr('src');
+          //console.log(image);
+          $("#menu ul li a").mouseover(function(){
+            var currentImage = $(this).attr('data-image');
+          //[ console.log(currentImage)';
+          $(this).parent().parent().parent().find('img').attr("src", currentImage);
+          $("#menu img").css("opacity", "1");
+        });
+
+        $("#menu ul li a").mouseout(function(){
+          $("#menu img").css("opacity", "1");
+          });
+        });
+        </script>
+          
   </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My first website</title>
+    <title>Rubi&Vera</title>
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
     <link rel="shortcut icon" href="images/favicon.png">
@@ -10,25 +10,32 @@
   <body>
 
     <header>
-      <img src="images/logo.png" alt="logo">
-      <h1>My first website</h1>
+      <div class="idioma">
+        <ul>
+          <li class="EN"><a href="about.html"><abbr title="English">EN</abbr></a></li>
+          <li class="ES"><a href="about_es.html"><abbr title="Español">ES</abbr></a></li>
+        </ul>
+      </div>
+      <div class="logo">
+        <img src="images/logo.png" alt="logo">
+      </div>
     </header>
-
+    
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="video.html">Video</a>
-      <a href="photo.html">Photo</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+      <li><a href="index.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://rubi-vera.blogspot.com">Blog</a></li>
+      </ul>
     </nav>
     
-    <section>
-     <h2>About</h2>
+    <section class="about">
 
       <table>
         <tr>
-          <th style="text-align: justify; padding: 10px;"><img src="images/profilepic.png" alt="profile"width="100%"></th>
-          <th style="width:75%; padding: 10px; text-align:justify; font-weight:normal; font-size:22px;">
+          <th><img src="images/profilepic.png" alt="profile"width="100%"></th>
+          <th style="width:75%">
             <p> 
               <b>A little about me...</b>
               <br>
@@ -41,9 +48,7 @@
     </section>
     
     <footer>
-      <h3 style="margin-bottom: 0px;">IES FUENTE SAN LUÍS</h3>
-      <a href="http:/www.iesfsl.org/"><img src="images/logofsl.png" alt="logofsl" width="20%" height="20%"></a>
-      <P style="margin-top: 0px;">Academical content</p>
+      <p>©Rubi & Vera 2022</p>
     </footer>
       
   </body>
